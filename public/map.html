@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FMgis</title>
+  <style>
+    .selected::before {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 0.5999999999999996rem;
+      background-color: rgba(244, 80, 80, 0.12);
+      content: "";
+      transition: all1s;
+    }
+    .unselected::before {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 0%;
+      height: 0.5999999999999996rem;
+      background-color: rgba(244, 80, 80, 0.12);
+      content: "";
+      transition: all 1s;
+    }
+    .unselected:hover:before {
+      width: 100%;
+    }
+    .tab {
+      position: fixed;
+      width: 5%;
+      height: 10%;
+      background: none;
+      border: none;
+      color: #F45050;
+      size: 13px;
+      font-weight: 700;
+    }
+    .drone_bg {
+      width: 423px;
+      height: 72px;
+      background: linear-gradient(rgba(244,80,80,1), rgba(246,163,86,1));
+      opacity: 1;
+      position: relative;
+      top: 0px;
+      left: 0px;
+      border: 0.5px solid rgba(196,196,196,1);
+    }
+    .drone_model {
+      width: 95px;
+      color: rgba(99,99,99,1);
+      position: fixed;
+      top: 39px;
+      left: 98px;
+      font-family: Comfortaa;
+      font-weight: Bold;
+      font-size: 10px;
+      opacity: 1;
+      text-align: left;
+    }
+    .drone_name {
+      width: 42px;
+      color: rgba(255,255,255,1);
+      position: fixed;
+      top: 22px;
+      left: 98px;
+      font-family: Comfortaa;
+      font-weight: Bold;
+      font-size: 13px;
+      opacity: 1;
+      text-align: left;
+    }
+    .checkbox {
+      width: 16px;
+      height: 16px;
+      background: url("../images/checkbox.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      opacity: 1;
+      position: fixed;
+      top: 11px;
+      left: 0px;
+      border: 0.5px solid rgba(196,196,196,1);
+      overflow: hidden;
+    }
+    .watch_btn {
+      width: 5%;
+      height: 3%;
+      background: rgba(255,255,255,1);
+      position: fixed;
+      top: 4%;
+      left: 16%;
+      padding: 10px;
+      overflow: hidden;
+    }
+    .watch_txt {
+      width: 89px;
+      color: rgba(99,99,99,1);
+      position: fixed;
+      font-family: Comfortaa;
+      font-weight: Bold;
+      font-size: 13px;
+      opacity: 1;
+      text-align: left;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <script src="/js/jquery-3.6.4.min.js"></script>
+	<div class="container">
+    <div class="tabs">
+      <button style="left: 5.5%;" class="tab unselected">Дроны</button>
+      <button style="left: 11.5%;" class="tab unselected">Станции</button>
+      <button style="left: 16.5%;" class="tab unselected">Все</button>
+    </div>
+    <div class="drone">
+      <div class="drone_bg">
+        <span class="drone_model">SUPERCAM SX350</span>
+        <span class="drone_name">Drone</span>
+        <div class="checkbox"></div>
+        <div class="watch_btn">
+         <span class="watch_txt">Осмотреть</span>
+        </div>
+      </div>
+    </div>
+		<img src="/img/ref_template.png" style="position: absolute; opacity: 50%; pointer-events: none;"></img>
+    <script>
+      $(".tab").click((i) => {
+        $(".selected").addClass("unselected")
+        $(".selected").removeClass("selected")
+        $(i.target).addClass("selected")
+        $(i.target).removeClass("unselected")
+        
+      })
+    </script>
+	</div>
+</body>
+</html>

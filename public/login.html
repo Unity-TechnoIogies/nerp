@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-size: 14px;
+        background: url("/img/bg.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+      }
+      .container {
+        width: 100%;
+        height: 888px;
+        opacity: 1;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+        display: grid;
+        place-items: center;
+      }
+      .loginBox {
+        width: 437px;
+        height: 288px;
+        background: rgba(255,255,255,1);
+        opacity: 1;
+        position: inherit;
+        overflow: hidden;
+        display: grid;
+        place-items: center;
+        padding: 4%;
+      }
+      .name {
+        width: 100%;
+        height: 39px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        padding: 12px 14px;
+        margin: 8px;
+        opacity: 1;
+        position: inherit;
+        overflow: hidden;
+      }
+      .nameinput::placeholder {
+        color: rgba(196,196,196,1);
+      }
+      .nameinput:placeholder-shown {
+        border-color: red;
+        outline-color: red;
+      }
+      .nameinput {
+        width: 100%;
+        position: inherit;
+        font-family: Comfortaa;
+        font-weight: Bold;
+        font-size: 13px;
+        opacity: 1;
+        text-align: left;
+      }
+      .password {
+        width: 100%;
+        height: 39px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        padding: 12px 14px;
+        margin: 8px;
+        opacity: 1;
+        position: inherit;
+        overflow: hidden;
+      }
+      .passinput::placeholder {
+        color: rgba(196,196,196,1);
+      }
+      .passinput:placeholder-shown {
+        border-color: red;
+        outline-color: red;
+      }
+      .passinput {
+        width: 100%;
+        position: inherit;
+        font-family: Comfortaa;
+        font-weight: Bold;
+        font-size: 13px;
+        opacity: 1;
+        text-align: left;
+      }
+      .login {
+        width: 100%;
+        height: 39px;
+        background: linear-gradient(rgba(244,80,80,1), rgba(246,163,86,1));
+        padding: 12px 14px;
+        margin: 8px;
+        opacity: 1;
+        position: inherit;
+        overflow: hidden;
+      }
+      .loginbtn {
+        width: 100%;
+        height: 100%;
+        color: rgba(255,255,255,1);
+        position: inherit;
+        font-family: Comfortaa;
+        font-weight: Bold;
+        font-size: 13px;
+        opacity: 1;
+        text-align: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+      .logintxt {
+        width: 178px;
+        color: rgba(244,80,80,0.7200000286102295);
+        position: inherit;
+        font-family: Comfortaa;
+        font-weight: Bold;
+        font-size: 13px;
+        opacity: 1;
+        text-align: left;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="loginBox">
+        <span class="logintxt">Войдите в рабочую зону</span>
+        <div class="name">
+          <input class="nameinput" placeholder="Имя, Отчество сотрудника">
+        </div>
+        <div class="password">
+          <input class="passinput" placeholder="Пароль">
+        </div>
+        <div class="login">
+          <button class="loginbtn">Войти</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
